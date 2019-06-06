@@ -19,6 +19,32 @@ def bubble_sort(array)
 end
 
 
+def bubble_sort_by(array)
+ n = array.length
+
+ (n-1).times{
+     array.each_index {|index|
+
+     if array[index + 1]
+        right = array[index +1]
+        left = array[index]
+         
+         output = yield(left,right)
+         if output > 0
+         array[index] = right
+         array[index + 1]=left
+        end
+    end
+
+     }
+ }
+ p array
+
+ end
+
+
+
+
 
 
 bubble_sort([5,2,1,4,3,6])
