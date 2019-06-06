@@ -15,10 +15,15 @@ def bubble_sort(array)
         end    
         }
     }
-    print array
-
+    p array
 end
+
+
 
 
 bubble_sort([5,2,1,4,3,6])
 bubble_sort([100,80,30,1000,20,40,60])
+bubble_sort(["z","j","a","e","i"])
+bubble_sort_by(["hi","hello","hey"]) { |left,right|
+    left.length - right.length
+}
